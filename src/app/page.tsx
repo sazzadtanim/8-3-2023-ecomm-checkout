@@ -60,7 +60,7 @@ function LeftSection() {
       <div className="schedule_delivery">
         <Headline title="schedule delivery" />
         <div className="form bg-white p-10 flex flex-col gap-5">
-          <Input label="Dates" placeholder="17 Apr, 23  -  19 Apr, 23" />
+          <Input label="Date" placeholder="17 Apr, 23  -  19 Apr, 23" type="date"/>
           <Input label="note" placeholder="Type your note" type={"text"} />
         </div>
       </div>
