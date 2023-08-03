@@ -29,7 +29,7 @@ const productCards: ProductCardProps[] = [
 const inputList: InputProps[] = [
   { label: "name", placeholder: "Bryan Cranston" },
   { label: "mobile number", placeholder: "+1 424-236-3574" },
-  { label: "email", placeholder: "tanimsazzad@gmail.com" },
+  { label: "email", placeholder: "example@email.com" },
   { label: "city", placeholder: "Hawthorne" },
   { label: "state", placeholder: "California" },
   { label: "ZIP", placeholder: "90250" },
