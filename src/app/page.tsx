@@ -29,7 +29,7 @@ const productCards: ProductCardProps[] = [
 const inputList: InputProps[] = [
   { label: "name", placeholder: "Bryan Cranston" },
   { label: "mobile number", placeholder: "+1 424-236-3574" },
-  { label: "email", placeholder: "tanimsazzad@gmail.com" },
+  { label: "email", placeholder: "example@email.com" },
   { label: "city", placeholder: "Hawthorne" },
   { label: "state", placeholder: "California" },
   { label: "ZIP", placeholder: "90250" },
@@ -60,7 +60,7 @@ function LeftSection() {
       <div className="schedule_delivery">
         <Headline title="schedule delivery" />
         <div className="form bg-white p-10 flex flex-col gap-5">
-          <Input label="Dates" placeholder="17 Apr, 23  -  19 Apr, 23" />
+          <Input label="Date" placeholder="17 Apr, 23  -  19 Apr, 23" type="date"/>
           <Input label="note" placeholder="Type your note" type={"text"} />
         </div>
       </div>
