@@ -8,7 +8,7 @@ import speaker from "@png/speaker.jpg";
 const productCards: ProductCardProps[] = [
   {
     model: "TOASB-2S",
-    title: "portable stereo speaker",
+    title: "Portable Stereo Speaker",
     price: "230.49",
     image: speaker,
   },

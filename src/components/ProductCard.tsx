@@ -1,4 +1,6 @@
+"use client";
 import Image, { StaticImageData } from "next/image";
+import { useState } from "react";
 
 export interface ProductCardProps {
   image?: StaticImageData;
@@ -9,24 +11,26 @@ export interface ProductCardProps {
 
 function ProductCard(props: ProductCardProps) {
   const { model, title, price, image } = props;
-
+  const [counter, setCounter] = useState(1);
   return (
     <div title={title} className="flex justify-between items-center">
-      <div className="flex">
-        <Image alt="" src={image ?? ""} />
+      <div className="flex gap-5 items-center justify-center">
+        <Image alt="" src={image ?? ""} className="w-16 h-16 object-contain" />
         <div className="grid leading-6 font-sans">
-          <span className="capitalize font-medium">
-            {title}
-          </span>
+          <span className="font-medium">{title}</span>
           <span className="font-light text-gray-500 ">{model}</span>
           <span className="font-medium">${price}</span>
         </div>
       </div>
 
       <div className="flex ring-1 gap-4 px-4 py-2 justify-center items-center ring-gray-200">
-        <span className="text-2xl">-</span>
-        <span>01</span>
-        <span className="text-2xl">+</span>
+        <button className="text-2xl" onClick={() => setCounter(counter - 1)}>
+          -
+        </button>
+        <span>{(counter<10 && counter>0) ? `0${counter}`:counter}</span>
+        <button className="text-2xl" onClick={() => setCounter(counter + 1)}>
+          +
+        </button>
       </div>
     </div>
   );
