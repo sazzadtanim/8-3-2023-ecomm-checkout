@@ -70,11 +70,11 @@ function LeftSection() {
         <div className="form bg-white p-10 flex">
           <Input
             label="online payment"
-            type="radio"
+            type="checkbox"
             placeholder="online payment"
           />
-          <Input label="cash on delivery" type="radio" />
-          <Input label="POS on delivery" type="radio" />
+          <Input label="cash on delivery" type="checkbox" />
+          <Input label="POS on delivery" type="checkbox" />
         </div>
       </div>
     </div>
