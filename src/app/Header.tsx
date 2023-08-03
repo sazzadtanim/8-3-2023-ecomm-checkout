@@ -1,7 +1,17 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 function Header() {
-  const links = ["home", "new arrivals", "sale", "contact"];
+  const links: { title: string; url: string }[] = [
+    { title: "home", url: "/" },
+    { title: "new arrivals", url: "/new_arrivals" },
+    { title: "sale", url: "/sale" },
+    { title: "contact", url: "/contact" },
+  ];
+
+  const path = usePathname();
+
   return (
     <header className="bg-white py-10 mb-10">
       <div className="container flex justify-between mx-auto items-center">
@@ -14,7 +24,7 @@ function Header() {
           >
             {links.map((nav, index) => (
               <>
-                <Link href={`/${nav}`}>{nav}</Link>
+                <Link href={nav.url}>{nav.title}</Link>
                 <div className="w-[5px] h-[5px] bg-black rounded-full last:hidden" />
               </>
             ))}
@@ -23,21 +33,23 @@ function Header() {
 
         <nav className="flex gap-10 justify-center items-center">
           <div className="relative">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-              />
-            </svg>
-            <div className="w-full h-[1px] bg-black absolute top-16 scale-150" />
+            <Link href={"/"}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+              </svg>
+              <div className="w-full h-[1px] bg-black absolute top-16 scale-150" />
+            </Link>
           </div>
           <div>
             <svg
