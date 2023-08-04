@@ -15,7 +15,12 @@ function ProductCard(props: ProductCardProps) {
   return (
     <div title={title} className="flex justify-between items-center">
       <div className="flex gap-5 items-center justify-center">
-        <Image alt="" src={image ?? ""} className="w-16 h-16 object-contain" />
+        <Image
+          alt=""
+          src={image ?? ""}
+          className="w-16 h-16 object-contain"
+          priority
+        />
         <div className="grid leading-6 font-sans">
           <span className="font-semibold text-gray-800">{title}</span>
           <span className=" text-gray-400 text-sm">{model}</span>

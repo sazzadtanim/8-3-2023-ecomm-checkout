@@ -1,11 +1,11 @@
 "use client";
 
 import DeliveryInformation from "@/components/DeliveryInformation";
-import Headline from "@/components/Headline";
 import Input from "@/components/Input";
 import OrderSummary from "@/components/OrderSummary";
 import ScheduleDelivery from "@/components/ScheduleDelivery";
 
+import Wrapper from "@/components/Wrapper";
 import { motion } from "framer-motion";
 import { boxShadow } from "./offlineData";
 
@@ -24,8 +24,7 @@ export default function Home() {
 
 function PaymentMethod() {
   return (
-    <div className="payment_method sm:mb-10 py-5 sm:py-0" title="Payment Method">
-      <Headline title="payment method" />
+    <Wrapper title="Payment method">
       <motion.div
         className="form bg-white sm:p-10 px-4 py-2 xl:flex"
         whileHover={boxShadow}
@@ -38,6 +37,6 @@ function PaymentMethod() {
         <Input label="cash on delivery" type="checkbox" />
         <Input label="POS on delivery" type="checkbox" />
       </motion.div>
-    </div>
+    </Wrapper>
   );
 }

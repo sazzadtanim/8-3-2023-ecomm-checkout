@@ -17,12 +17,14 @@ export default function Input(props: InputProps) {
         </label>
       ) : (
         <>
-          <label htmlFor="" className="">
+          <label htmlFor={label} className="">
             {label}
           </label>
           <input
+            id={label}
             type={type}
             placeholder={placeholder}
+            autoComplete={label === "address" ? "address" : placeholder}
             className="px-5 py-2 ring-1 ring-gray-200 active:ring-black appearance-none w-full hover:ring-gray-400 placeholder:font-normal placeholder:text-gray-300 font-gerbera"
           />
         </>

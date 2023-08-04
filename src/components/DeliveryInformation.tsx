@@ -1,7 +1,7 @@
 import { boxShadow } from "@/app/offlineData";
 import { motion } from "framer-motion";
-import Headline from "./Headline";
 import Input, { InputProps } from "./Input";
+import Wrapper from "./Wrapper";
 
 const inputList: InputProps[] = [
   { label: "name", placeholder: "Bryan Cranston" },
@@ -13,11 +13,9 @@ const inputList: InputProps[] = [
   { label: "address", placeholder: "4796 libby street", type: "text" },
 ];
 
-
 export default function DeliveryInformation() {
   return (
-    <div className="delivery_information" title="Delivery Information">
-      <Headline title={"Delivery information"} />
+    <Wrapper title="Delivery Information">
       <motion.div
         className="form bg-white sm:p-10 sm:grid sm:grid-cols-2 sm:gap-5 space-y-3 sm:space-y-0 p-4"
         whileHover={boxShadow}
@@ -26,6 +24,6 @@ export default function DeliveryInformation() {
           <Input key={index} {...input} />
         ))}
       </motion.div>
-    </div>
+    </Wrapper>
   );
 }
