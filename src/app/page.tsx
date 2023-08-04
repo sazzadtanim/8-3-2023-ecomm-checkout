@@ -1,9 +1,15 @@
+"use client";
+
 import Headline from "@/components/Headline";
 import Input, { InputProps } from "@/components/Input";
 import ProductCard, { ProductCardProps } from "@/components/ProductCard";
 import anc from "@png/anc.png";
 import camera from "@png/camera.jpg";
 import speaker from "@png/speaker.jpg";
+import { motion } from "framer-motion";
+import { useState } from "react";
+
+const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(200,0,200,0.25)" };
 
 const productCards: ProductCardProps[] = [
   {
@@ -46,28 +52,76 @@ export default function Home() {
 }
 
 function LeftSection() {
+  const [isOn, setIsOn] = useState(false);
+  const toggleSwitch = () => setIsOn(!isOn);
+
+  const buttonStyles = {
+    left: "justify-start ",
+    right: "justify-end ",
+  };
+
+  const roundbuttonStyles = {
+    left: " bg-gray-300",
+    right: " bg-gray-600",
+  };
+
   return (
     <div className="flex flex-col gap-10 flex-1 ">
-      <div className="delivery_information">
+      <div className="delivery_information" title="Delivery Information">
         <Headline title={"Delivery information"} />
-        <div className="form bg-white p-10 grid grid-cols-2 gap-5">
+        <motion.div
+          className="form bg-white p-10 grid grid-cols-2 gap-5"
+          whileHover={boxShadow}
+        >
           {inputList.map((input, index) => (
             <Input key={index} {...input} />
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <div className="schedule_delivery">
-        <Headline title="schedule delivery" />
-        <div className="form bg-white p-10 flex flex-col gap-5">
-          <Input label="Date" placeholder="17 Apr, 23  -  19 Apr, 23" type="date"/>
-          <Input label="note" placeholder="Type your note" type={"text"} />
-        </div>
+      <div className="schedule_delivery" title="Schedule Delivery">
+        <>
+          <div className="font-gerbera capitalize mb-6 flex gap-10">
+            schedule delivery
+            <div
+              className={`bg-gray-400 flex h-6 w-9 rounded-2xl items-center ${
+                isOn ? buttonStyles["right"] : buttonStyles["left"]
+              } `}
+              data-isOn={isOn}
+              onClick={toggleSwitch}
+            >
+              <motion.div
+                className={`rounded-full w-4 h-4 mx-1 ${
+                  isOn ? roundbuttonStyles["right"] : roundbuttonStyles["left"]
+                }`}
+                layout
+                transition={{ type: "spring", stiffness: 700, damping: 30 }}
+              />
+            </div>
+          </div>
+        </>
+        {isOn && (
+          <motion.div
+            className="form bg-white p-10 flex flex-col gap-5 select-none"
+            initial={{ y: 20, opacity: 0 }}
+            exit={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            whileHover={boxShadow}
+            transition={{ duration: 0.3 }}
+          >
+            <Input
+              label="Date"
+              placeholder="17 Apr, 23  -  19 Apr, 23"
+              type="date"
+            />
+            <Input label="note" placeholder="Type your note" type={"text"} />
+          </motion.div>
+        )}
       </div>
 
-      <div className="payment_method">
+      <div className="payment_method mb-10" title="Payment Method">
         <Headline title="payment method" />
-        <div className="form bg-white p-10 flex">
+        <motion.div className="form bg-white p-10 flex" whileHover={boxShadow}>
           <Input
             label="online payment"
             type="checkbox"
@@ -75,7 +129,7 @@ function LeftSection() {
           />
           <Input label="cash on delivery" type="checkbox" />
           <Input label="POS on delivery" type="checkbox" />
-        </div>
+        </motion.div>
       </div>
     </div>
   );
@@ -83,12 +137,18 @@ function LeftSection() {
 
 function RightSection() {
   return (
-    <div className="right_section max-w-2xl flex-1 grid">
+    <div
+      className="right_section max-w-2xl flex-1 grid mb-10"
+      title="Order Summary"
+    >
       <div className="absolute">
         {" "}
         <Headline title="order summary" />
       </div>
-      <div className="product_summary_cart p-10 bg-white mt-12 flex flex-col justify-between">
+      <motion.div
+        className="product_summary_cart p-10 bg-white mt-12 flex flex-col justify-between"
+        whileHover={boxShadow}
+      >
         <div className="flex flex-col gap-10 mb-10">
           {productCards.map((product, index) => (
             <ProductCard key={index} {...product} />
@@ -98,24 +158,24 @@ function RightSection() {
           <div className="border-y ring-gray-200 py-5 flex flex-col gap-5">
             <div className="flex capitalize justify-between">
               <span className="font-light text-gray-500">subtotal</span>
-              <span>$1250.32</span>
+              <span className="font-sans font-semibold">$1250.32</span>
             </div>
             <div className="flex capitalize justify-between">
               <span className="font-light text-gray-500">shipping</span>
-              <span> -- </span>
+              <span className="font-sans font-semibold"> -- </span>
             </div>
           </div>
 
           <div className="flex capitalize justify-between py-5">
             <span className="font-light text-gray-500">total(usd)</span>
-            <span>$S7250</span>
+            <span className="font-sans font-semibold">$7250</span>
           </div>
 
-          <button className="bg-[#22331D] text-white capitalize py-2 w-full mx-auto">
+          <button className="bg-[#22331D] text-white capitalize py-2 w-full mx-auto hover:bg-slate-950">
             confirm order
           </button>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -17,9 +17,9 @@ function ProductCard(props: ProductCardProps) {
       <div className="flex gap-5 items-center justify-center">
         <Image alt="" src={image ?? ""} className="w-16 h-16 object-contain" />
         <div className="grid leading-6 font-sans">
-          <span className="font-medium">{title}</span>
-          <span className="font-light text-gray-500 ">{model}</span>
-          <span className="font-medium">${price}</span>
+          <span className="font-semibold">{title}</span>
+          <span className=" text-gray-400 text-sm">{model}</span>
+          <span className="font-sans font-semibold">${price}</span>
         </div>
       </div>
 
@@ -27,7 +27,7 @@ function ProductCard(props: ProductCardProps) {
         <button className="text-2xl" onClick={() => setCounter(counter - 1)}>
           -
         </button>
-        <span>{(counter<10 && counter>0) ? `0${counter}`:counter}</span>
+        <span className="font-sans font-medium">{(counter<10 && counter>0) ? `0${counter}`:counter}</span>
         <button className="text-2xl" onClick={() => setCounter(counter + 1)}>
           +
         </button>
