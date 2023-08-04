@@ -9,7 +9,7 @@ import speaker from "@png/speaker.jpg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(0,0,0,0.20)" };
+const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(0,0,0,0.10)" };
 
 const productCards: ProductCardProps[] = [
   {
