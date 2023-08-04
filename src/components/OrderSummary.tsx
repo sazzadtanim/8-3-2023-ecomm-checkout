@@ -1,4 +1,4 @@
-import { boxShadow } from "@/app/page";
+import { boxShadow } from "@/app/offlineData";
 import anc from "@png/anc.png";
 import camera from "@png/camera.jpg";
 import speaker from "@png/speaker.jpg";

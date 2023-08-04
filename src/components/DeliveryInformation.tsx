@@ -1,3 +1,4 @@
+import { boxShadow } from "@/app/offlineData";
 import { motion } from "framer-motion";
 import Headline from "./Headline";
 import Input, { InputProps } from "./Input";
@@ -11,7 +12,7 @@ const inputList: InputProps[] = [
   { label: "ZIP", placeholder: "90250", type: "number" },
   { label: "address", placeholder: "4796 libby street", type: "text" },
 ];
-const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(0,0,0,0.10)" };
+
 
 export default function DeliveryInformation() {
   return (

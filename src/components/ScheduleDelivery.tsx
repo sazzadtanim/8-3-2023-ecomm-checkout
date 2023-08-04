@@ -1,4 +1,4 @@
-import { boxShadow } from "@/app/page";
+import { boxShadow } from "@/app/offlineData";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Input from "./Input";
@@ -17,7 +17,7 @@ export default function ScheduleDelivery() {
     right: " bg-gray-100",
   };
   return (
-        // on all devices except small devices I have to show this.
+    // on all devices except small devices I have to show this.
 
     <div className="schedule_delivery" title="Schedule Delivery">
       <>

@@ -7,8 +7,7 @@ import OrderSummary from "@/components/OrderSummary";
 import ScheduleDelivery from "@/components/ScheduleDelivery";
 
 import { motion } from "framer-motion";
-
-export const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(0,0,0,0.10)" };
+import { boxShadow } from "./offlineData";
 
 export default function Home() {
   return (
