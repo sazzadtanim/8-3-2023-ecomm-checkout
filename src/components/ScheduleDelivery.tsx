@@ -17,17 +17,16 @@ export default function ScheduleDelivery() {
     right: " bg-gray-100",
   };
   return (
-    // on all devices except small devices I have to show this.
+    // on all devices except small devices I have to show this.// hidden, sm:bolck
 
     <div className="schedule_delivery" title="Schedule Delivery">
       <>
-        <div className="font-gerbera capitalize mb-6 flex gap-10">
+        <div className="font-gerbera capitalize sm:mb-6 flex gap-10 bg-white sm:bg-transparent px-4 sm:px-0 py-4 sm:py-0">
           schedule delivery
           <div
             className={`bg-[#22331D] flex h-6 w-9 rounded-2xl items-center ${
               isOn ? buttonStyles["right"] : buttonStyles["left"]
             } `}
-            data-isOn={isOn}
             onClick={toggleSwitch}
           >
             <motion.div
@@ -43,7 +42,7 @@ export default function ScheduleDelivery() {
       {isOn && (
         // on small devices I have show only this.
         <motion.div
-          className="form bg-white p-10 flex flex-col gap-5 select-none"
+          className="form bg-white sm:p-10 flex flex-col gap-5 select-none p-4"
           initial={{ y: 20, opacity: 0 }}
           exit={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}

@@ -29,7 +29,7 @@ const productCards: ProductCardProps[] = [
 export default function OrderSummary() {
   return (
     <div
-      className="right_section max-w-2xl flex-1 grid mb-10"
+      className="right_section max-w-2xl flex-1 grid sm:mb-10"
       title="Order Summary"
     >
       <div className="absolute">
@@ -37,7 +37,7 @@ export default function OrderSummary() {
         <Headline title="order summary" />
       </div>
       <motion.div
-        className="product_summary_cart p-10 bg-white mt-12 flex flex-col justify-between"
+        className="product_summary_cart p-4 sm:p-10 bg-white sm:mt-12 flex flex-col justify-between"
         whileHover={boxShadow}
       >
         <div className="flex flex-col gap-10 mb-10">

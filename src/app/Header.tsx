@@ -25,10 +25,10 @@ function Header() {
           "
           >
             {links.map((nav, index) => (
-              <>
+              <div key={index}>
                 <Link href={nav.url}>{nav.title}</Link>
                 <div className="w-[5px] h-[5px] bg-black rounded-full last:hidden" />
-              </>
+              </div>
             ))}
           </ul>
         </nav>

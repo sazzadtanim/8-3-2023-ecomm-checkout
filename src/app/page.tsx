@@ -11,8 +11,8 @@ import { boxShadow } from "./offlineData";
 
 export default function Home() {
   return (
-    <main className="flex container mx-auto justify-between gap-10 mb-20 flex-col sm:flex-row">
-      <div className="flex flex-col gap-10 flex-1 ">
+    <main className="flex container mx-auto justify-between sm:gap-10 sm:mb-20 flex-col sm:flex-row">
+      <div className="flex flex-col sm:gap-10 flex-1 ">
         <DeliveryInformation />
         <ScheduleDelivery />
         <PaymentMethod />
@@ -24,9 +24,12 @@ export default function Home() {
 
 function PaymentMethod() {
   return (
-    <div className="payment_method mb-10" title="Payment Method">
+    <div className="payment_method sm:mb-10 py-5 sm:py-0" title="Payment Method">
       <Headline title="payment method" />
-      <motion.div className="form bg-white p-10 flex" whileHover={boxShadow}>
+      <motion.div
+        className="form bg-white sm:p-10 px-4 py-2 xl:flex"
+        whileHover={boxShadow}
+      >
         <Input
           label="online payment"
           type="checkbox"
