@@ -23,7 +23,7 @@ export default function Input(props: InputProps) {
           <input
             type={type}
             placeholder={placeholder}
-            className="px-5 py-2 ring-1 ring-gray-200 active:ring-black appearance-none w-full hover:ring-gray-400"
+            className="px-5 py-2 ring-1 ring-gray-200 active:ring-black appearance-none w-full hover:ring-gray-400 font-medium placeholder:font-normal placeholder:text-gray-300 text-gray-800"
           />
         </>
       )}
