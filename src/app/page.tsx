@@ -61,8 +61,8 @@ function LeftSection() {
   };
 
   const roundbuttonStyles = {
-    left: " bg-gray-300",
-    right: " bg-gray-600",
+    left: " bg-gray-400",
+    right: " bg-gray-100",
   };
 
   return (
@@ -84,7 +84,7 @@ function LeftSection() {
           <div className="font-gerbera capitalize mb-6 flex gap-10">
             schedule delivery
             <div
-              className={`bg-gray-400 flex h-6 w-9 rounded-2xl items-center ${
+              className={`bg-[#22331D] flex h-6 w-9 rounded-2xl items-center ${
                 isOn ? buttonStyles["right"] : buttonStyles["left"]
               } `}
               data-isOn={isOn}
