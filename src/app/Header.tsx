@@ -13,7 +13,7 @@ function Header() {
   const path = usePathname();
 
   return (
-    <header className="bg-white sm:py-10 mb-10 py-3">
+    <header className="bg-white sm:py-10 sm:mb-10 py-3">
       <div className="sm:container flex justify-between sm:mx-auto items-center mx-4">
         <Link className="sm:text-xl tracking-tighter font-black" href={"/"}>
           LOGO
