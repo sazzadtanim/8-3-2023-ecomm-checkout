@@ -9,7 +9,7 @@ import speaker from "@png/speaker.jpg";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(200,0,200,0.25)" };
+const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(0,0,0,0.20)" };
 
 const productCards: ProductCardProps[] = [
   {
@@ -34,11 +34,11 @@ const productCards: ProductCardProps[] = [
 
 const inputList: InputProps[] = [
   { label: "name", placeholder: "Bryan Cranston" },
-  { label: "mobile number", placeholder: "+1 424-236-3574" },
-  { label: "email", placeholder: "example@email.com" },
-  { label: "city", placeholder: "Hawthorne" },
+  { label: "mobile number", placeholder: "+1 424-236-3574", type:'number' },
+  { label: "email", placeholder: "example@email.com" , type:'email'},
+  { label: "city", placeholder: "Hawthorne", },
   { label: "state", placeholder: "California" },
-  { label: "ZIP", placeholder: "90250" },
+  { label: "ZIP", placeholder: "90250", type:'number' },
   { label: "address", placeholder: "4796 libby street", type: "text" },
 ];
 
