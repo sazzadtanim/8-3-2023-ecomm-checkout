@@ -17,6 +17,8 @@ export default function ScheduleDelivery() {
     right: " bg-gray-100",
   };
   return (
+        // on all devices except small devices I have to show this.
+
     <div className="schedule_delivery" title="Schedule Delivery">
       <>
         <div className="font-gerbera capitalize mb-6 flex gap-10">
@@ -39,6 +41,7 @@ export default function ScheduleDelivery() {
         </div>
       </>
       {isOn && (
+        // on small devices I have show only this.
         <motion.div
           className="form bg-white p-10 flex flex-col gap-5 select-none"
           initial={{ y: 20, opacity: 0 }}

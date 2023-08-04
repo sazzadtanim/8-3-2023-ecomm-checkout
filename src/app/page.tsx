@@ -10,11 +10,9 @@ import { motion } from "framer-motion";
 
 export const boxShadow = { boxShadow: "1px 1px 10px 0 rgba(0,0,0,0.10)" };
 
-
-
 export default function Home() {
   return (
-    <main className="flex container mx-auto justify-between gap-10 mb-20">
+    <main className="flex container mx-auto justify-between gap-10 mb-20 flex-col sm:flex-row">
       <div className="flex flex-col gap-10 flex-1 ">
         <DeliveryInformation />
         <ScheduleDelivery />
@@ -41,4 +39,3 @@ function PaymentMethod() {
     </div>
   );
 }
-
