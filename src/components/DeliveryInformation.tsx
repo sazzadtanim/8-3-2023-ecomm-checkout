@@ -18,7 +18,7 @@ export default function DeliveryInformation() {
     <div className="delivery_information" title="Delivery Information">
       <Headline title={"Delivery information"} />
       <motion.div
-        className="form bg-white p-10 grid grid-cols-2 gap-5"
+        className="form bg-white p-10 sm:grid sm:grid-cols-2 sm:gap-5"
         whileHover={boxShadow}
       >
         {inputList.map((input, index) => (
