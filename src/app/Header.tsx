@@ -1,6 +1,6 @@
 'use client'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 function Header() {
   const links: { title: string; url: string }[] = [
@@ -33,7 +33,7 @@ function Header() {
           </ul>
         </nav>
 
-        <nav className='flex items-center justify-center gap-3 sm:gap-10'>
+        <nav className='flex items-center justify-center gap-6 sm:gap-10'>
           <div className='relative'>
             <Link href={'/'}>
               <svg
@@ -42,7 +42,7 @@ function Header() {
                 viewBox='0 0 24 24'
                 strokeWidth={1.5}
                 stroke='currentColor'
-                className='h-4 w-4 sm:h-6 sm:w-6'
+                className='h-5 w-5 sm:h-6 sm:w-6'
               >
                 <path
                   strokeLinecap='round'
@@ -63,7 +63,7 @@ function Header() {
               viewBox='0 0 24 24'
               strokeWidth={1.5}
               stroke='currentColor'
-              className='h-4 w-4 sm:h-6 sm:w-6'
+              className='h-5 w-5 sm:h-6 sm:w-6'
             >
               <path
                 strokeLinecap='round'

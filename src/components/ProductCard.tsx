@@ -22,11 +22,11 @@ function ProductCard(props: ProductCardProps) {
           priority
         />
         <div className='grid font-sans leading-6'>
-          <span className='text-xs font-bold text-gray-800 sm:text-base sm:font-semibold'>
+          <span className='text-xs font-bold text-gray-800 lg:text-base lg:font-semibold'>
             {title}
           </span>
-          <span className='text-xs text-gray-400 sm:text-sm '>{model}</span>
-          <span className='font-sans text-sm font-semibold sm:text-base'>
+          <span className='text-xs text-gray-400 lg:text-sm '>{model}</span>
+          <span className='font-sans text-sm font-semibold lg:text-base'>
             ${price}
           </span>
         </div>

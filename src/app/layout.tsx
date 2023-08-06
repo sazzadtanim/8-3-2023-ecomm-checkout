@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${inter.className} ${gerbera.variable} mx-auto min-h-screen w-full bg-bg_color-100 antialiased`}
+        className={`${inter.className} ${gerbera.variable} mx-auto min-h-screen w-full sm:bg-bg_color-100 antialiased `}
       >
         <Header />
         {children}

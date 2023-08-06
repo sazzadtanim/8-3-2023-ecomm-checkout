@@ -8,7 +8,7 @@ export default function Input(props: InputProps) {
   const { label, placeholder, type } = props
 
   return (
-    <div className='flex w-full flex-col gap-2 font-sans text-sm capitalize leading-7 last:col-start-1 last:col-end-3'>
+    <div className='flex w-full flex-col gap-1 sm:gap-2 font-sans text-sm capitalize leading-7 last:col-start-1 last:col-end-3'>
       {type === 'checkbox' ? (
         <label className='flex gap-5'>
           <input type='checkbox' name='radio' />
