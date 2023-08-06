@@ -37,7 +37,7 @@ export default function OrderSummary() {
         <Headline title='order summary' />
       </div>
       <motion.div
-        className='product_summary_cart flex flex-col justify-between bg-white p-4 sm:mt-12 sm:p-10'
+        className='product_summary_cart flex flex-col justify-between bg-white p-4 sm:mt-12 sm:p-2 md:p-10'
         whileHover={boxShadow}
       >
         <div className='mb-10 flex flex-col gap-10'>
