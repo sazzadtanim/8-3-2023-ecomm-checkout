@@ -17,7 +17,7 @@ export default function DeliveryInformation() {
   return (
     <Wrapper title='Delivery Information'>
       <motion.div
-        className='form space-y-3 bg-white p-4 sm:grid sm:grid-cols-2 sm:gap-5 sm:space-y-0 sm:p-10'
+        className='form space-y-3 bg-white p-4 lg:grid sm:grid-cols-2 sm:gap-5 sm:space-y-0 sm:p-10'
         whileHover={boxShadow}
       >
         {inputList.map((input, index) => (
