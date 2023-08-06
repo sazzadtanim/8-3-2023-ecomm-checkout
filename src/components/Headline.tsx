@@ -1,7 +1,7 @@
 export default function Headline(props: { title: string }) {
   return (
-    <div className="font-gerbera capitalize mb-6 sm:block hidden">
+    <div className='mb-6 hidden font-gerbera capitalize sm:block'>
       {props.title}
     </div>
-  );
+  )
 }
