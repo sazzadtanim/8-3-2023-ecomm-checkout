@@ -24,8 +24,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
+      <head>
+        <meta
+          name='google-site-verification'
+          content='mVhuoyaQb9O-oeJpANj-Ol56TbzLdro7yPcK1epzPfE'
+        />
+      </head>
       <body
-        className={`${inter.className} ${gerbera.variable} mx-auto min-h-screen w-full sm:bg-bg_color-100 antialiased `}
+        className={`${inter.className} ${gerbera.variable} mx-auto min-h-screen w-full antialiased sm:bg-bg_color-100 `}
       >
         <Header />
         {children}
